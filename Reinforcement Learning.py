@@ -5,7 +5,7 @@ import numpy as np
 height	=	6
 width	=	8
 n_actions = 4
-n_episodes = 10000
+n_episodes = 100000
 epsilon_current = 1
 epsilon_start = 1.
 epsilon_decay = 0.01
@@ -95,7 +95,7 @@ def epsilon_greedy_policy(state, Q_table, epsilon_current, epsilon_start, epsilo
 # Train agent
 
 for e in range(n_episodes):
-	start_state = 10
+	start_state = 9
 	state = start_state
 	end_episode = False
 	t = 0
@@ -111,7 +111,7 @@ for e in range(n_episodes):
 		state = new_state
 
 print('					action')
-print('\n State 	N S E W 	Greedy Policy')
+print('\n State 	  			 N   S    E    w 	 	 Greedy Policy')
 counter = -1
 action_dict = {0:'N', 1:'S', 2:'E', 3:'W'}
 for a in range(height*width):
